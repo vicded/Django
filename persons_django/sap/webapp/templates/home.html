@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Sistema de administracion de Personal</h1>
+    <div>
+       <p>Numero de Personas: {{num_personas}}</p>
+    </div>
+    <div>
+        {%for persona in personas%}
+        <li>Persona {{persona.id}}:
+                    {{persona.nombre}}
+                    {{persona.apellido}}
+                    {{persona.email}}
+            <a href="detalle_persona/{{persona.id}}">ver detalle</a>
+        </li>
+        {% endfor %}
+    </div>
+</body>
+</html>
